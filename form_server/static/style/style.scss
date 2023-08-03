@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Roboto';
+    font-display: swap;
+    font-weight: 400 700;
+    src: url('/assets/fonts/Roboto-Regular.ttf')
+        format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-display: swap;
+    font-weight: 400 700;
+    src: url('/assets/fonts/Roboto-Bold.ttf')
+        format('truetype');
+}
+
+:root {
+    --clr-primary-hsl: 4, 100%, 67%;
+
+    --clr-dark-slate-grey-hsl: 234, 29%, 20%;
+    --clr-sec-charcoal-grey-hsl: 235, 18%, 26%;
+    --clr-sec-grey-hsl : 231, 7%, 60%;
+    --clr-sec-white-hsl: 0, 0%, 100%;
+
+    --clr-primary: var(--clr-primary-hsl);
+
+    --clr-dark-slate-grey: hsl(var(--clr-dark-slate-grey-hsl));
+    --clr-sec-charcoal-grey: hsl(var(--clr-sec-charcoal-grey-hsl));
+    --clr-sec-grey: hsl(var(--clr-sec-grey-hsl));
+    --clr-sec-white: hsl(var(--clr-sec-white-hsl));
+
+    --gradient-button-hover: 
+
+    --font-family-defualt: 'Roboto', sans-serif;
+
+    --font-family-bold: 'Roboto-bold', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 5rem;
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit; /*sets all font sizes to 1rem*/
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+.grid-group {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-defualt);
+    font-size: var(--fs-400);
+    color:  var(--clr-sec-charcoal-grey);
+}
+
+
+
+@media (min-width: 600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+}
+
+main {
+    max-width: 46rem;
+    display: grid;
+    background: var(--clr-sec-white);
+}
+
+@media (min-width: 600px) {
+    body {
+        background-color: var(--clr-dark-slate-grey);
+    }
+
+    main{
+        padding: 1rem 1rem;
+
+        margin-inline: 1rem;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 2rem;
+        overflow: hidden;
+        
+    }
+
+    picture {
+        order:2;
+    }
+
+    .text-content {
+        order: 1;
+    }
+}
+
+picture {
+    img {
+        width: 100%;
+    }
+}
+
+.text-content {
+    
+    padding: 2rem 1rem;
+    font-weight: var(--fw-regular);
+
+    h1 {
+        font-family: var(--font-family-bold);
+        font-size: var(--fs-700);
+        font-weight: var(--fw-bold);
+
+        color: var(--clr-sec-charcoal-grey);
+    }
+
+    >p {
+        padding: 1rem 0;
+    }
+
+    ul {
+        list-style-type: none ;
+        padding: 0;
+
+        margin-top: 1rem;
+
+        li {
+            margin-bottom: 1.5rem;
+            text-align: start;
+            display: flex;
+            align-items: flex-start;
+            
+            img {
+                margin-right: 1rem;
+            }
+
+        }
+    }
+
+    form {
+        --clr-error: hsl(4, 100%, 67%);
+
+        label{
+            font-size: .75rem;
+            font-weight: var(--fw-bold);
+            font-family: var(--font-family-bold);
+        }
+
+        .error-label {
+            color: var(--clr-error);
+            display: none;
+        }
+
+        input {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 1.5px solid 
+                hsla(var(--clr-sec-charcoal-grey-hsl), .3);
+            border-radius: .5rem;
+            margin: .5rem 0;
+
+            &:focus {
+                outline: none;
+                border: 0.1rem solid 
+                hsl(var(--clr-sec-charcoal-grey-hsl));
+
+            }
+        }
+
+        button {
+            margin-top: 1rem;
+            text-align: center;
+            color: var(--clr-sec-white);
+            font-weight: 800;
+            border: none;
+            background-color: var(--clr-dark-slate-grey);
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border-radius: .5rem;
+
+            box-shadow: none;
+            
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(90deg,
+                    hsl(346,100,66),
+                    hsl(15,100,61));
+                box-shadow: 0 1rem 2rem hsla(15,100,61,.5) ;
+            }
+
+        }
+    }
+
+    .error {
+        .error-label {
+            display: initial;
+        }
+
+        input {
+            border-color: var(--clr-error);
+            background-color: hsla(4, 100%, 67%, .2);
+            color: var(--clr-error);
+
+            &:focus {
+                outline: none;
+                border: 0.15rem solid 
+                var(--clr-error);
+
+            }
+        }
+        
+    }
+
+}
