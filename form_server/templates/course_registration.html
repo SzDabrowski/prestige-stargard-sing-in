@@ -10,13 +10,30 @@
 
 </head>
 <body>
-  <main clas="grid-flow">
+  <main class="grid-group">
 
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit">Zapisz się</button>
-  </form>
+    <section class="image-content">
+
+
+    </section>
+
+    <section class="text-content">
+
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        
+        <p class="rodo">
+          <span><input type="checkbox"></span>
+          Rodo </p>
+
+        <button type="submit">Zapisz się</button>
+    </form>
+
+    </section>
+
+    
   
   </main>
   
