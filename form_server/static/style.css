@@ -38,7 +38,7 @@ img, svg {
 .grid-group {
   display: grid;
   align-content: start;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 body {
@@ -46,24 +46,28 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: var(--fs-400);
   color: var(--clr-sec-charcoal-grey);
-  overflow: hidden;
 }
 
 @media (min-width: 600px) {
+  .grid-group {
+    grid-template-columns: 1fr 1fr;
+  }
   body {
     height: 100vh;
     display: grid;
     place-items: center;
+    overflow: hidden;
   }
 }
 main {
   width: 100%;
 }
 main .image-content {
-  background-image: url("../static/backgroung.jpeg");
+  background-image: url("../static/background2.jpeg");
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: center;
+  filter: grayscale(0);
   height: 100vh;
 }
 main .image-content img {
@@ -74,23 +78,34 @@ main .image-content header {
   height: 80%;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   justify-content: center;
 }
 main .image-content header h1 {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  margin-top: 2rem;
   margin-bottom: 0.2rem;
+  text-shadow: 1px 1px 1px black;
 }
 main .image-content header h2 {
   font-size: 1rem;
 }
 main .text-content {
   height: 100vh;
-  margin: 3rem 2rem;
+  margin: 1rem 2rem;
   margin-bottom: 0;
+}
+main .text-content .logo {
+  display: block;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .text-content img {
+  max-width: 50%;
 }
 main .text-content form {
   margin: 3rem 0;
@@ -100,7 +115,7 @@ main .text-content form > * {
   padding-bottom: 0.2rem;
   text-transform: uppercase;
   border-bottom: 0.1rem solid hsla(var(--clr-dark-slate-grey-hsl), 0.3);
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
 }
@@ -119,11 +134,11 @@ main .text-content form .rodo {
 main .text-content form .rodo input {
   margin: 0;
 }
-main .text-content form .button-container {
+main .button-container {
   text-align: center;
   border: none;
 }
-main .text-content form .button-container button {
+main .button-container button {
   color: var(--clr-dark-slate-grey);
   background: transparent;
   text-align: center;
@@ -137,8 +152,25 @@ main .text-content form .button-container button {
   transition: all 0.3s ease-in;
   outline: none;
 }
-main .text-content form .button-container button:hover {
+main .button-container button:hover {
   color: white;
   background-color: var(--clr-dark-slate-grey);
   transform: translateY(-1px);
+}
+main .success {
+  margin: 5rem 0;
+  text-align: center;
+  height: auto;
+}
+main .success h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+main .success p {
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=style.css.map */
