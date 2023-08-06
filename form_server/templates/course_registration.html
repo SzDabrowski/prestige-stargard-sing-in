@@ -13,11 +13,29 @@
   <main class="grid-group">
 
     <section class="image-content">
-
+     
+      
+     <header>
+        <h1>Zapisz się!</h1>
+        <h2>serdecznie zapraszamy do zapisów
+          na nowy sezon zajęć tenecznych</h2>
+        </header>
 
     </section>
 
     <section class="text-content">
+
+     
+       
+        
+
+        <a href="">
+          <img src="../static/logo.jpeg" alt="logo">
+        </a>
+
+      
+      
+
 
       <form method="post">
         {% csrf_token %}
@@ -25,10 +43,14 @@
 
         
         <p class="rodo">
-          <span><input type="checkbox"></span>
-          Rodo </p>
+          <span><input type="checkbox" required></span>
+          Rodo Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+          Nulla debitis veniam nam labore praesentium libero provident natus 
+          necessitatibus iure, ut modi impedit blanditiis at. Obcaecati officia ipsa excepturi eveniet sapiente? </p>
 
-        <button type="submit">Zapisz się</button>
+        <div class="button-container">
+          <button type="submit">Zapisz się</button>
+        </div>
     </form>
 
     </section>
