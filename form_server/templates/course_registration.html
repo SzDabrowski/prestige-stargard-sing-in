@@ -10,13 +10,44 @@
 
 </head>
 <body>
-  <main clas="grid-flow">
+  <main class="grid-group">
 
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit">Zapisz się</button>
-  </form>
+    <section class="image-content">
+     
+      
+     <header>
+        <h1>Zapisz się!</h1>
+        <h2>serdecznie zapraszamy do zapisów
+          na nowy sezon zajęć tenecznych</h2>
+        </header>
+
+    </section>
+
+    <section class="text-content">
+
+        <a href="" class="logo">
+          <img src="../static/logo.png" alt="logo">
+        </a>
+
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        
+        <p class="rodo">
+          <span><input type="checkbox" required></span>
+          Rodo Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+          Nulla debitis veniam nam labore praesentium libero provident natus 
+          necessitatibus iure, ut modi impedit blanditiis at. Obcaecati officia ipsa excepturi eveniet sapiente? </p>
+
+        <div class="button-container">
+          <button type="submit">Zapisz się</button>
+        </div>
+    </form>
+
+    </section>
+
+    
   
   </main>
   

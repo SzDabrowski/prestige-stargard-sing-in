@@ -1,12 +1,40 @@
+
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Success</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
 </head>
 <body>
-    <h1>Success!</h1>
-    <p>Dziękujemy za zapisanie się na kurs tańca. Twoje zgłoszenie zostało pomyślnie zarejestrowane.</p>
-    <p>Możesz sprawdzić swoje dane na stronie admina.</p>
-    <a href="{% url 'course_registration' %}">Powrót do formularza rejestracyjnego</a>
+  <main class="grid-group">
+
+    <section class="image-content">
+     
+
+    </section>
+
+    <section class="text-content success">
+
+        <a href="" class="logo">
+          <img src="../static/logo.png" alt="logo">
+        </a>
+
+            <h1>Udało się!</h1>
+            <p>Dziękujemy za zapisanie się na kurs tańca. Twoje zgłoszenie zostało pomyślnie zarejestrowane.</p>
+        
+            <div class="button-container">
+                <button type="submit"  onclick="location.href='https://prestige.stargard.pl/';">Powrót</button>
+            </div>
+            
+    </section>
+
+    
+  
+  </main>
+  
 </body>
 </html>

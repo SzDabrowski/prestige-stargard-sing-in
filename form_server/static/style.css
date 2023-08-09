@@ -1,15 +1,4 @@
-@font-face {
-  font-family: "Roboto";
-  font-display: swap;
-  font-weight: 400 700;
-  src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto-Bold";
-  font-display: swap;
-  font-weight: 400 700;
-  src: url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;500&display=swap");
 :root {
   --clr-primary-hsl: 4, 100%, 67%;
   --clr-dark-slate-grey-hsl: 234, 29%, 20%;
@@ -22,8 +11,6 @@
   --clr-sec-grey: hsl(var(--clr-sec-grey-hsl));
   --clr-sec-white: hsl(var(--clr-sec-white-hsl));
   --gradient-button-hover:
-  --font-family-defualt: "Roboto", sans-serif;
-  --font-family-bold: "Roboto-bold", sans-serif;
   --fw-regular: 400;
   --fw-bold: 700;
   --fs-400: 1rem;
@@ -51,127 +38,139 @@ img, svg {
 .grid-group {
   display: grid;
   align-content: start;
-  gap: 1rem;
+  grid-template-columns: 1fr;
 }
 
 body {
-  margin: 0;
-  font-family: var(--font-family-defualt);
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: var(--fs-400);
   color: var(--clr-sec-charcoal-grey);
 }
 
 @media (min-width: 600px) {
+  .grid-group {
+    grid-template-columns: 1fr 1fr;
+  }
   body {
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
     place-items: center;
+    overflow: hidden;
   }
 }
 main {
-  max-width: 46rem;
-  display: grid;
-  background: var(--clr-sec-white);
-}
-
-@media (min-width: 600px) {
-  body {
-    background-color: var(--clr-dark-slate-grey);
-  }
-  main {
-    padding: 1rem 1rem;
-    margin-inline: 1rem;
-    grid-template-columns: 1fr 1fr;
-    border-radius: 2rem;
-    overflow: hidden;
-  }
-  picture {
-    order: 2;
-  }
-  .text-content {
-    order: 1;
-  }
-}
-picture img {
   width: 100%;
 }
-
-.text-content {
-  padding: 2rem 1rem;
-  font-weight: var(--fw-regular);
+main .image-content {
+  background-image: url("../static/background2.jpeg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0);
+  height: 100vh;
 }
-.text-content h1 {
-  font-family: var(--font-family-bold);
-  font-size: var(--fs-700);
-  font-weight: var(--fw-bold);
-  color: var(--clr-sec-charcoal-grey);
+main .image-content img {
+  height: 100%;
 }
-.text-content > p {
-  padding: 1rem 0;
-}
-.text-content ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-.text-content ul li {
-  margin-bottom: 1.5rem;
-  text-align: start;
+main .image-content header {
+  color: white;
+  height: 80%;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.text-content ul li img {
-  margin-right: 1rem;
+main .image-content header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.2rem;
+  text-shadow: 1px 1px 1px black;
 }
-.text-content form {
-  --clr-error: hsl(4, 100%, 67%);
+main .image-content header h2 {
+  font-size: 1rem;
 }
-.text-content form label {
-  font-size: 0.75rem;
-  font-weight: var(--fw-bold);
-  font-family: var(--font-family-bold);
+main .text-content {
+  height: 100vh;
+  margin: 1rem 2rem;
+  margin-bottom: 0;
 }
-.text-content form .error-label {
-  color: var(--clr-error);
-  display: none;
+main .text-content .logo {
+  display: block;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.text-content form input {
-  width: 100%;
-  padding: 1rem 1.25rem;
-  border: 1.5px solid hsla(var(--clr-sec-charcoal-grey-hsl), 0.3);
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
+main .text-content img {
+  max-width: 50%;
 }
-.text-content form input:focus {
-  outline: none;
-  border: 0.1rem solid hsl(var(--clr-sec-charcoal-grey-hsl));
+main .text-content form {
+  margin: 3rem 0;
+  align-items: center;
 }
-.text-content form button {
-  margin-top: 1rem;
-  text-align: center;
-  color: var(--clr-sec-white);
-  font-weight: 800;
+main .text-content form > * {
+  padding-bottom: 0.2rem;
+  text-transform: uppercase;
+  border-bottom: 0.1rem solid hsla(var(--clr-dark-slate-grey-hsl), 0.3);
+  margin-top: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+main .text-content form > * input {
+  margin-left: 1rem;
+  background: transparent;
   border: none;
-  background-color: var(--clr-dark-slate-grey);
-  width: 100%;
-  padding: 1rem 1.25rem;
-  border-radius: 0.5rem;
-  box-shadow: none;
-  cursor: pointer;
-}
-.text-content form button:hover {
-  background: linear-gradient(90deg, hsl(346, 100%, 66%), hsl(15, 100%, 61%));
-  box-shadow: 0 1rem 2rem hsla(15, 100%, 61%, 0.5);
-}
-.text-content .error .error-label {
-  display: initial;
-}
-.text-content .error input {
-  border-color: var(--clr-error);
-  background-color: hsla(4, 100%, 67%, 0.2);
-  color: var(--clr-error);
-}
-.text-content .error input:focus {
   outline: none;
-  border: 0.15rem solid var(--clr-error);
+}
+main .text-content form .rodo {
+  display: block;
+  color: hsla(var(--clr-dark-slate-grey-hsl), 0.5);
+  border: none;
+  font-size: 0.8rem;
+}
+main .text-content form .rodo input {
+  margin: 0;
+}
+main .button-container {
+  text-align: center;
+  border: none;
+}
+main .button-container button {
+  color: var(--clr-dark-slate-grey);
+  background: transparent;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border: 0.1rem solid var(--clr-dark-slate-grey);
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  outline: none;
+}
+main .button-container button:hover {
+  color: white;
+  background-color: var(--clr-dark-slate-grey);
+  transform: translateY(-1px);
+}
+main .success {
+  margin: 5rem 0;
+  text-align: center;
+  height: auto;
+}
+main .success h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+main .success p {
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=style.css.map */
