@@ -123,7 +123,7 @@ main{
     .text-content{
         
         height: 100vh;
-        margin: 1rem 2rem;
+        margin: 10% 2rem;
         margin-bottom: 0;
 
         .logo {
@@ -141,8 +141,9 @@ main{
         form {
             margin: 3rem 0;
             align-items: center;
+            border: none;
 
-            >* {
+            > * {
                 padding-bottom: .2rem;
                 text-transform: uppercase;
                 border-bottom: .1rem solid 
@@ -163,6 +164,7 @@ main{
 
             .rodo{
                 
+                margin-top: 1rem;
                 display: block;
                 color: hsla(var(--clr-dark-slate-grey-hsl),.5);
                 border: none;
@@ -179,7 +181,7 @@ main{
 
     .button-container {
         text-align: center;
-        border: none;
+        border: none !important;
         
         button {
             color: var(--clr-dark-slate-grey);
