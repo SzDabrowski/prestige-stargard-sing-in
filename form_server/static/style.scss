@@ -87,6 +87,8 @@ main{
         background-position: center;
         filter: grayscale(0);
         height: 100vh;
+        padding: 1rem 2rem;
+        text-align: center;
 
         img {
             height: 100%;
@@ -117,13 +119,35 @@ main{
             h2 {
                 font-size: 1rem;
             }
+
+            button {
+                display: none;
+                margin-top: 1rem;
+                border-radius: 100%;
+                padding: .5rem .5em;
+                background-color: transparent;
+                border: 3px solid white;
+                cursor: pointer;
+
+                svg { 
+                    position: relative;
+                    top: 5px;
+                }
+
+                &:hover, &:focus {
+                    box-shadow: 1px 1px 10px white;
+                    background-color: hsla(var(--clr-dark-slate-grey-hsl),.3);
+                }
+
+                
+            }
         }
     }
 
     .text-content{
         
         height: 100vh;
-        margin: 1rem 2rem;
+        margin: 10% 2rem;
         margin-bottom: 0;
 
         .logo {
@@ -131,18 +155,21 @@ main{
             min-width: 100%;
             display: flex;
             justify-content: center;
+            
         }
         
         img {
-            max-width: 50%;
+            max-width: 40%;
             
         }
 
         form {
             margin: 3rem 0;
             align-items: center;
+            border: none;
+            min-height: 550px;
 
-            >* {
+            > * {
                 padding-bottom: .2rem;
                 text-transform: uppercase;
                 border-bottom: .1rem solid 
@@ -163,6 +190,7 @@ main{
 
             .rodo{
                 
+                margin-top: 1rem;
                 display: block;
                 color: hsla(var(--clr-dark-slate-grey-hsl),.5);
                 border: none;
@@ -179,7 +207,7 @@ main{
 
     .button-container {
         text-align: center;
-        border: none;
+        border: none !important;
         
         button {
             color: var(--clr-dark-slate-grey);
@@ -222,5 +250,10 @@ main{
             margin-bottom: 2rem;
         }
     }
+}
 
+@media (max-width: 600px) {
+    header button {
+        display: block !important;
+    }
 }

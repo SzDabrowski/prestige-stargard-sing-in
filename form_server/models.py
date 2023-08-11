@@ -15,4 +15,4 @@ class Client(models.Model):
     course_choice = models.ForeignKey(DanceCourseType, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} - {self.get_course_choice_display()}"
+        return f"{self.first_name} {self.last_name} - {self.course_choice}"

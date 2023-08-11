@@ -69,6 +69,8 @@ main .image-content {
   background-position: center;
   filter: grayscale(0);
   height: 100vh;
+  padding: 1rem 2rem;
+  text-align: center;
 }
 main .image-content img {
   height: 100%;
@@ -93,9 +95,26 @@ main .image-content header h1 {
 main .image-content header h2 {
   font-size: 1rem;
 }
+main .image-content header button {
+  display: none;
+  margin-top: 1rem;
+  border-radius: 100%;
+  padding: 0.5rem 0.5em;
+  background-color: transparent;
+  border: 3px solid white;
+  cursor: pointer;
+}
+main .image-content header button svg {
+  position: relative;
+  top: 5px;
+}
+main .image-content header button:hover, main .image-content header button:focus {
+  box-shadow: 1px 1px 10px white;
+  background-color: hsla(var(--clr-dark-slate-grey-hsl), 0.3);
+}
 main .text-content {
   height: 100vh;
-  margin: 1rem 2rem;
+  margin: 10% 2rem;
   margin-bottom: 0;
 }
 main .text-content .logo {
@@ -105,11 +124,13 @@ main .text-content .logo {
   justify-content: center;
 }
 main .text-content img {
-  max-width: 50%;
+  max-width: 40%;
 }
 main .text-content form {
   margin: 3rem 0;
   align-items: center;
+  border: none;
+  min-height: 550px;
 }
 main .text-content form > * {
   padding-bottom: 0.2rem;
@@ -126,6 +147,7 @@ main .text-content form > * input {
   outline: none;
 }
 main .text-content form .rodo {
+  margin-top: 1rem;
   display: block;
   color: hsla(var(--clr-dark-slate-grey-hsl), 0.5);
   border: none;
@@ -136,7 +158,7 @@ main .text-content form .rodo input {
 }
 main .button-container {
   text-align: center;
-  border: none;
+  border: none !important;
 }
 main .button-container button {
   color: var(--clr-dark-slate-grey);
@@ -173,4 +195,10 @@ main .success p {
   letter-spacing: 0.1rem;
   line-height: 1.5rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  header button {
+    display: block !important;
+  }
 }/*# sourceMappingURL=style.css.map */

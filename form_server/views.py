@@ -8,17 +8,15 @@ from .models import DanceCourseType
 def create_dance_course_types():
     # Ta funkcja tworzy początkową listę kursów tańca w bazie danych
     dance_course_types = [
-        'Video klip dance kids 6-11 lat',
-        'Video klip dance junior 12-16 lat',
-        'Bachata Ladies',
-        'Ladies styling',
-        'Latino solo',
-        'Kurs tańca towarzyskiego i użytkowego',
-        'Bachata pary',
-        'Taniec dla dzieci 4-5 lat small kids',
-        'Taniec dla dzieci 6-7 lat Kids',
-        'Taniec towarzyski sport 8-11 lat',
-        'Taniec towarzyski sport 12-16 lat',
+        'Video klip Dance Kids 6-11 lat',
+        'Bachata w parach',
+        'Taniec Towarzyski Sport 8-11 lat',
+        'Taniec Towarzyski Sport 12-16 lat',
+        'Taniec dla dzieci Prestige  Kids 4-5 lat',
+        'Taniec dla dzieci Prestige Junior 6-7 lat',
+        'Latino Solo',
+        'Ladies Styling',
+        'Latino Sport'
     ]
 
     for course_type in dance_course_types:
