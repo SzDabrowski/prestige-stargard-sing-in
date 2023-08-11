@@ -87,6 +87,8 @@ main{
         background-position: center;
         filter: grayscale(0);
         height: 100vh;
+        padding: 1rem 2rem;
+        text-align: center;
 
         img {
             height: 100%;
@@ -117,6 +119,26 @@ main{
             h2 {
                 font-size: 1rem;
             }
+
+            button {
+                width: 50;
+                margin-top: 1rem;
+                border-radius: 100%;
+                padding: .5rem .5em;
+                background-color: transparent;
+                border: 3px solid white;
+                cursor: pointer;
+
+                svg { 
+                    position: relative;
+                    top: 5px;
+                }
+
+                &:hover, &:focus {
+                    box-shadow: 1px 1px 10px white;
+                    background-color: hsla(var(--clr-dark-slate-grey-hsl),.3);
+                }
+            }
         }
     }
 
@@ -131,10 +153,11 @@ main{
             min-width: 100%;
             display: flex;
             justify-content: center;
+            
         }
         
         img {
-            max-width: 50%;
+            max-width: 40%;
             
         }
 
@@ -142,6 +165,7 @@ main{
             margin: 3rem 0;
             align-items: center;
             border: none;
+            min-height: 550px;
 
             > * {
                 padding-bottom: .2rem;
