@@ -121,7 +121,7 @@ main{
             }
 
             button {
-                width: 50;
+                display: none;
                 margin-top: 1rem;
                 border-radius: 100%;
                 padding: .5rem .5em;
@@ -138,6 +138,8 @@ main{
                     box-shadow: 1px 1px 10px white;
                     background-color: hsla(var(--clr-dark-slate-grey-hsl),.3);
                 }
+
+                
             }
         }
     }
@@ -248,5 +250,10 @@ main{
             margin-bottom: 2rem;
         }
     }
+}
 
+@media (max-width: 600px) {
+    header button {
+        display: block !important;
+    }
 }

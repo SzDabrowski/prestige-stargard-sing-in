@@ -96,7 +96,7 @@ main .image-content header h2 {
   font-size: 1rem;
 }
 main .image-content header button {
-  width: 50;
+  display: none;
   margin-top: 1rem;
   border-radius: 100%;
   padding: 0.5rem 0.5em;
@@ -195,4 +195,10 @@ main .success p {
   letter-spacing: 0.1rem;
   line-height: 1.5rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  header button {
+    display: block !important;
+  }
 }/*# sourceMappingURL=style.css.map */
